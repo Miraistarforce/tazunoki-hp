@@ -296,9 +296,14 @@ ul {
   transition: width 0.3s var(--ease-out-expo), left 0.3s var(--ease-out-expo);
 }
 
-.nav-list a:hover::after {
+.nav-list a:hover::after,
+.nav-list a.current::after {
   width: 100%;
   left: 0;
+}
+
+.nav-list a.current {
+  color: var(--pink);
 }
 
 .nav-list a:hover {
