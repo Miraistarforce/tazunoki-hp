@@ -104,6 +104,9 @@ ul {
 .pt-note:nth-child(3n+2) { color: #b8b0c8; }
 
 /* --- Utility --- */
+.sp-only { display: none; }
+@media (max-width: 600px) { .sp-only { display: inline; } }
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
