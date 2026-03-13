@@ -1,0 +1,312 @@
+/* =========================================
+   生徒さんの声ページ固有スタイル
+   ========================================= */
+
+/* --- Page Hero --- */
+.page-hero {
+  position: relative;
+  padding: 160px 0 80px;
+  background: var(--pink-bg);
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.page-hero-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-hero-en {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.page-hero-lead {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 2;
+}
+
+/* Current nav link */
+.nav-list a.current {
+  color: var(--pink);
+}
+.nav-list a.current::after {
+  width: 100%;
+}
+
+/* --- Voice Block --- */
+.voice-block {
+  margin-bottom: 0;
+  padding: 60px 0;
+  background: var(--white);
+}
+
+.voice-block-alt {
+  background: var(--gray-light);
+}
+
+.voice-block-inner {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.voice-block-inner.reverse {
+  flex-direction: row-reverse;
+}
+
+/* --- Voice Image --- */
+.voice-image {
+  flex: 0 0 300px;
+}
+
+.voice-image-frame {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50% 45% 55% 40% / 40% 55% 45% 50%;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(200, 90, 124, 0.15);
+  animation: voiceFloat 6s ease-in-out infinite;
+}
+
+.voice-block:nth-child(2) .voice-image-frame {
+  border-radius: 45% 55% 40% 50% / 55% 40% 50% 45%;
+  animation-delay: -1.5s;
+}
+
+.voice-block:nth-child(3) .voice-image-frame {
+  border-radius: 55% 40% 50% 45% / 45% 50% 40% 55%;
+  animation-delay: -3s;
+}
+
+.voice-block:nth-child(4) .voice-image-frame {
+  border-radius: 40% 50% 45% 55% / 50% 45% 55% 40%;
+  animation-delay: -4.5s;
+}
+
+.voice-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes voiceFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(4px) rotate(-1deg);
+  }
+}
+
+/* --- Voice Content --- */
+.voice-content {
+  flex: 1;
+}
+
+.voice-number {
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--pink-light);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.voice-number .num {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--pink);
+}
+
+.voice-author {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--pink);
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 3px solid var(--pink-light);
+}
+
+.voice-content p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+.voice-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Voices Section wrapper --- */
+.voices-section {
+  padding-bottom: 0;
+}
+
+.voices-section .section-title {
+  margin-bottom: 0;
+}
+
+/* --- Trial Lesson Section --- */
+.voices-trial {
+  background: var(--pink-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.trial-block {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trial-block-inner {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.trial-image {
+  flex: 0 0 280px;
+}
+
+.trial-image .voice-image-frame {
+  border-radius: 48% 52% 42% 58% / 52% 42% 58% 48%;
+  animation-delay: -2s;
+}
+
+.trial-content {
+  flex: 1;
+}
+
+.trial-content .voice-author {
+  margin-bottom: 20px;
+}
+
+.trial-content p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+.trial-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 960px) {
+  .page-hero {
+    padding: 140px 0 64px;
+  }
+
+  .voice-block-inner,
+  .voice-block-inner.reverse,
+  .trial-block-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .voice-image,
+  .trial-image {
+    flex: none;
+  }
+
+  .voice-image-frame {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .voice-author {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .voice-content,
+  .trial-content {
+    text-align: left;
+  }
+
+  .voice-block {
+    padding: 48px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 110px 0 48px;
+  }
+
+  .page-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .page-hero-lead {
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+
+  .page-hero-lead br {
+    display: none;
+  }
+
+  .voice-image-frame {
+    width: 180px;
+    height: 180px;
+  }
+
+  .voice-block {
+    padding: 36px 0;
+  }
+
+  .voice-block-inner {
+    gap: 28px;
+  }
+
+  .voice-content p {
+    font-size: 0.84rem;
+  }
+
+  .trial-block-inner {
+    gap: 28px;
+  }
+
+  .trial-content p {
+    font-size: 0.84rem;
+  }
+}

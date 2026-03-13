@@ -1,0 +1,539 @@
+/* =========================================
+   シニアのための「ピアノde脳活」ページ固有スタイル
+   ========================================= */
+
+/* --- Page Hero --- */
+.page-hero {
+  position: relative;
+  padding: 160px 0 80px;
+  background: var(--pink-bg);
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.page-hero-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-hero-en {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.page-hero-lead {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 2;
+}
+
+/* Current nav link */
+.nav-list a.current {
+  color: var(--pink);
+}
+.nav-list a.current::after {
+  width: 100%;
+}
+
+/* --- Intro Section --- */
+.senior-intro {
+  background: var(--white);
+}
+
+.senior-locations {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.senior-location-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.senior-location-item {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 30px;
+  letter-spacing: 0.05em;
+}
+
+.senior-description {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.senior-description p {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+/* --- Media Section --- */
+.senior-media {
+  background: var(--gray-light);
+}
+
+.media-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.media-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s;
+}
+
+.media-item:hover {
+  transform: translateY(-3px);
+}
+
+.media-badge {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--pink);
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 50%;
+  letter-spacing: 0.05em;
+}
+
+.media-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.media-content p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.media-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--pink);
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.media-link:hover {
+  opacity: 0.7;
+}
+
+/* --- Videos Section --- */
+.senior-videos {
+  background: var(--white);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-item {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Pricing Section --- */
+.senior-pricing {
+  background: var(--gray-light);
+}
+
+.pricing-block {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pricing-block:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-block-header {
+  background: var(--pink);
+  color: #fff;
+  padding: 28px 32px;
+  text-align: center;
+}
+
+.pricing-block-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.price-detail {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.price-amount {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.price-yen {
+  font-size: 1.2rem;
+  margin-left: 2px;
+}
+
+.price-tax {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.pricing-block-body {
+  padding: 28px 32px;
+}
+
+/* Schedule Grid */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.schedule-grid-half {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.schedule-item {
+  background: var(--pink-bg);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.schedule-location {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.schedule-time {
+  font-size: 0.84rem;
+  color: var(--pink);
+  font-weight: 500;
+}
+
+.pricing-desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.pricing-notes {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-notes li {
+  font-size: 0.84rem;
+  color: var(--gray);
+  line-height: 1.8;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.pricing-notes li::before {
+  content: "※";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+/* --- TV Gallery Section --- */
+.senior-tv-gallery {
+  background: var(--white);
+  overflow: hidden;
+}
+
+.tv-gallery-lead {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.tv-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pink) var(--pink-bg);
+  padding-bottom: 8px;
+}
+
+.tv-scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tv-scroll-wrapper::-webkit-scrollbar-track {
+  background: var(--pink-bg);
+  border-radius: 3px;
+}
+
+.tv-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: var(--pink);
+  border-radius: 3px;
+}
+
+.tv-scroll-track {
+  display: flex;
+  gap: 16px;
+  padding: 0 max(24px, calc((100vw - 1100px) / 2));
+  width: max-content;
+}
+
+.tv-scroll-item {
+  flex-shrink: 0;
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)),
+              box-shadow 0.4s ease;
+}
+
+.tv-scroll-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.tv-scroll-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.tv-scroll-item:hover img {
+  transform: scale(1.05);
+}
+
+.tv-scroll-hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gray);
+  opacity: 0.6;
+  margin-top: 20px;
+  letter-spacing: 0.1em;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 960px) {
+  .page-hero {
+    padding: 140px 0 64px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .media-item {
+    padding: 20px;
+  }
+
+  .tv-scroll-item {
+    width: 240px;
+  }
+
+  .tv-scroll-item img {
+    height: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 110px 0 48px;
+  }
+
+  .page-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .page-hero-lead {
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+
+  .page-hero-lead br {
+    display: none;
+  }
+
+  .senior-location-list {
+    gap: 8px;
+  }
+
+  .senior-location-item {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .senior-description p {
+    font-size: 0.88rem;
+    text-align: left;
+  }
+
+  .media-item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .media-badge {
+    width: 38px;
+    height: 38px;
+    font-size: 0.7rem;
+  }
+
+  .media-content h3 {
+    font-size: 0.92rem;
+  }
+
+  .media-content p {
+    font-size: 0.82rem;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-block-header {
+    padding: 20px 16px;
+  }
+
+  .pricing-block-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .pricing-block-body {
+    padding: 20px 16px;
+  }
+
+  .price-amount {
+    font-size: 1.6rem;
+  }
+
+  .pricing-desc {
+    font-size: 0.85rem;
+  }
+
+  .video-grid {
+    max-width: 100%;
+  }
+
+  .video-item {
+    border-radius: 10px;
+  }
+
+  .tv-scroll-track {
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .tv-scroll-item {
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  .tv-scroll-item img {
+    height: 140px;
+  }
+
+  .tv-gallery-lead {
+    font-size: 0.88rem;
+  }
+}

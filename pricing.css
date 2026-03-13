@@ -1,0 +1,724 @@
+/* =========================================
+   料金案内ページ固有スタイル
+   ========================================= */
+
+/* --- Page Hero --- */
+.page-hero {
+  position: relative;
+  padding: 160px 0 80px;
+  background: var(--pink-bg);
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.page-hero-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-hero-en {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.page-hero-lead {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 2;
+}
+
+/* --- Common Info Banner --- */
+.pricing-common {
+  background: var(--white);
+}
+
+.pricing-common-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.pricing-common-card {
+  background: var(--pink-bg);
+  border-radius: 16px;
+  padding: 32px 48px;
+  text-align: center;
+  flex: 0 1 320px;
+  transition: transform 0.3s;
+}
+
+.pricing-common-card:hover {
+  transform: translateY(-4px);
+}
+
+.pricing-common-label {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.pricing-common-price {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--pink);
+}
+
+.pricing-common-price small {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+/* --- School Section --- */
+.pricing-school {
+  position: relative;
+}
+
+.pricing-school:nth-child(odd) {
+  background: var(--gray-light);
+}
+
+.pricing-school:nth-child(even) {
+  background: var(--white);
+}
+
+.pricing-school-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.pricing-school-badge {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+}
+
+.pricing-school-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.08em;
+}
+
+.pricing-school-sub {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-top: 8px;
+}
+
+/* --- Course Block --- */
+.pricing-course {
+  margin-bottom: 48px;
+}
+
+.pricing-course:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-course-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--dark);
+  padding-left: 16px;
+  border-left: 3px solid var(--pink);
+  margin-bottom: 20px;
+}
+
+.pricing-course-desc {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* --- Price Table --- */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-school:nth-child(even) .pricing-table {
+  background: var(--gray-light);
+}
+
+.pricing-table thead th {
+  background: var(--pink);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.pricing-table tbody td {
+  font-size: 0.85rem;
+  color: var(--dark);
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(200, 90, 124, 0.08);
+}
+
+.pricing-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pricing-table tbody tr:hover {
+  background: var(--pink-bg);
+}
+
+.pricing-table .td-label {
+  text-align: left;
+  font-weight: 500;
+}
+
+.pricing-table .td-price {
+  font-weight: 600;
+  color: var(--pink);
+}
+
+/* --- Notes --- */
+.pricing-notes {
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: var(--pink-bg);
+  border-radius: 12px;
+}
+
+.pricing-school:nth-child(even) .pricing-notes {
+  background: rgba(200, 90, 124, 0.04);
+}
+
+.pricing-notes li {
+  font-size: 0.8rem;
+  color: var(--gray);
+  line-height: 1.9;
+  padding-left: 18px;
+  position: relative;
+}
+
+.pricing-notes li::before {
+  content: "※";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+  font-size: 0.75rem;
+}
+
+/* --- Schedule Table --- */
+.pricing-schedule {
+  margin-top: 48px;
+}
+
+.pricing-schedule-title {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-school:nth-child(even) .schedule-table {
+  background: var(--gray-light);
+}
+
+.schedule-table th,
+.schedule-table td {
+  font-size: 0.82rem;
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(200, 90, 124, 0.08);
+}
+
+.schedule-table thead th {
+  background: var(--pink-light);
+  color: #fff;
+  font-weight: 600;
+}
+
+.schedule-table tbody td {
+  color: var(--gray);
+}
+
+.schedule-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table tbody tr:hover {
+  background: var(--pink-bg);
+}
+
+/* --- Support Lesson Section --- */
+.pricing-support {
+  background: var(--white);
+}
+
+.pricing-support-box {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--pink-bg);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.pricing-support-box h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.pricing-support-box p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.pricing-support-prices {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.pricing-support-item {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px 32px;
+  flex: 0 1 220px;
+}
+
+.pricing-support-item .label {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-bottom: 6px;
+}
+
+.pricing-support-item .price {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--pink);
+}
+
+.pricing-support-item .price small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+/* --- Adult Course Info --- */
+.pricing-adult-info {
+  margin-top: 40px;
+  padding: 32px;
+  background: var(--pink-bg);
+  border-radius: 16px;
+}
+
+.pricing-adult-lead {
+  font-size: 0.9rem;
+  color: var(--dark);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.pricing-adult-examples {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-adult-examples li {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 2;
+  padding-left: 24px;
+  position: relative;
+}
+
+.pricing-adult-examples li::before {
+  content: counter(adult-item);
+  counter-increment: adult-item;
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.pricing-adult-info {
+  counter-reset: adult-item;
+}
+
+.pricing-adult-note {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 2;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--pink-light);
+}
+
+/* --- Teacher Support Course --- */
+.pricing-teacher-support {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.pricing-teacher-support-lead {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--pink);
+  margin-bottom: 20px;
+}
+
+.pricing-teacher-support p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 2;
+  margin-bottom: 8px;
+}
+
+.pricing-teacher-price-box {
+  background: var(--pink-bg);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+}
+
+.pricing-teacher-price {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--pink);
+  margin-bottom: 12px;
+}
+
+.pricing-teacher-price small {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.pricing-teacher-detail {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* --- Video Advice Lesson --- */
+.pricing-video-advice {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.pricing-video-advice > p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 2;
+  margin-bottom: 8px;
+}
+
+.pricing-video-price-box {
+  background: var(--pink-bg);
+  border-radius: 16px;
+  padding: 28px 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.pricing-video-price-box .price {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--pink);
+  margin-bottom: 8px;
+}
+
+.pricing-video-price-box .price small {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.pricing-video-price-box .detail {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.pricing-video-flow {
+  padding: 28px 32px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-video-flow h4 {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.pricing-video-flow ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: flow-step;
+}
+
+.pricing-video-flow ol li {
+  font-size: 0.84rem;
+  color: var(--gray);
+  line-height: 2;
+  padding-left: 32px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.pricing-video-flow ol li::before {
+  content: counter(flow-step);
+  counter-increment: flow-step;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  background: var(--pink);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- General Notes --- */
+.pricing-general-notes {
+  background: var(--gray-light);
+}
+
+.pricing-general-notes-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-general-notes-box h3 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-light);
+}
+
+.pricing-general-notes-box li {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 2;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pricing-general-notes-box li::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+/* Current nav link */
+.nav-list a.current {
+  color: var(--pink);
+}
+.nav-list a.current::after {
+  width: 100%;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 960px) {
+  .page-hero {
+    padding: 140px 0 64px;
+  }
+
+  .pricing-common-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-common-card {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+    padding: 24px 32px;
+  }
+
+  .pricing-table thead th,
+  .pricing-table tbody td {
+    padding: 10px 8px;
+    font-size: 0.78rem;
+  }
+
+  .pricing-support-prices {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-support-item {
+    flex: none;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .pricing-school-header {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 110px 0 48px;
+  }
+
+  .page-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .page-hero-lead {
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+
+  .page-hero-lead br {
+    display: none;
+  }
+
+  .pricing-common-card {
+    padding: 20px 24px;
+  }
+
+  .pricing-common-price {
+    font-size: 1.6rem;
+  }
+
+  .pricing-course-title {
+    font-size: 1.05rem;
+    padding-left: 12px;
+  }
+
+  .pricing-table {
+    font-size: 0.75rem;
+  }
+
+  .pricing-table thead th,
+  .pricing-table tbody td {
+    padding: 8px 5px;
+    font-size: 0.72rem;
+  }
+
+  .pricing-support-box {
+    padding: 24px 16px;
+    border-radius: 14px;
+  }
+
+  .pricing-support-box h3 {
+    font-size: 1.05rem;
+  }
+
+  .pricing-general-notes-box {
+    padding: 20px 16px;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 8px 4px;
+    font-size: 0.72rem;
+  }
+
+  .pricing-teacher-price {
+    font-size: 1.8rem;
+  }
+
+  .pricing-teacher-price-box {
+    padding: 24px 16px;
+  }
+
+  .pricing-video-price-box {
+    padding: 20px 16px;
+  }
+
+  .pricing-video-flow {
+    padding: 20px 16px;
+  }
+
+  .pricing-adult-info {
+    padding: 24px 16px;
+  }
+
+  .pricing-course {
+    margin-bottom: 36px;
+  }
+
+  .pricing-school-header {
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,830 @@
+/* =========================================
+   講師紹介ページ固有スタイル
+   ========================================= */
+
+/* --- Page Hero --- */
+.page-hero {
+  position: relative;
+  padding: 160px 0 80px;
+  background: var(--pink-bg);
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.page-hero-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-hero-en {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.page-hero-lead {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 2;
+}
+
+/* --- Teacher Detail (代表) --- */
+.teacher-detail {
+  background: var(--white);
+  position: relative;
+}
+
+.teacher-detail:nth-of-type(even) {
+  background: var(--gray-light);
+}
+
+.teacher-detail-alt {
+  background: var(--gray-light);
+}
+
+.teacher-detail-inner {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.teacher-detail-inner.reverse {
+  flex-direction: row-reverse;
+}
+
+.teacher-detail-image {
+  flex: 0 0 360px;
+  position: sticky;
+  top: 100px;
+}
+
+/* Teacher message box */
+.teacher-message-box {
+  margin-top: 32px;
+  padding: 28px 32px;
+  background: var(--pink-bg);
+  border-radius: 16px;
+  border-left: 4px solid var(--pink);
+}
+
+.teacher-message-box p {
+  font-size: 0.9rem;
+  color: var(--pink);
+  font-weight: 500;
+  line-height: 2;
+  font-style: italic;
+}
+
+.teacher-img-frame {
+  width: 340px;
+  height: 440px;
+  border-radius: 200px;
+  overflow: hidden;
+  box-shadow: 0 12px 50px rgba(200, 90, 124, 0.15);
+}
+
+.teacher-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.teacher-detail-info {
+  flex: 1;
+}
+
+.teacher-role-badge {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 18px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.08em;
+}
+
+.teacher-name {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+  letter-spacing: 0.08em;
+}
+
+.teacher-name-en {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  color: var(--pink);
+  letter-spacing: 0.15em;
+  margin-bottom: 32px;
+}
+
+.teacher-story h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: 32px;
+  margin-bottom: 12px;
+  padding-left: 16px;
+  border-left: 3px solid var(--pink);
+}
+
+.teacher-story p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+/* Stage list (出演歴) */
+.teacher-stage-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.teacher-stage-list li {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.8;
+  padding: 10px 0;
+  padding-left: 0;
+  border-bottom: 1px solid rgba(200, 90, 124, 0.1);
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.teacher-stage-list li:last-child {
+  border-bottom: none;
+}
+
+.stage-year {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Qualifications box */
+.teacher-qualifications-box {
+  margin-top: 40px;
+  padding: 32px;
+  background: var(--pink-bg);
+  border-radius: 16px;
+}
+
+.teacher-qualifications-box h4,
+.teacher-achievements h4 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-light);
+}
+
+.teacher-qualifications-box li,
+.teacher-achievements li {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 2;
+  padding-left: 20px;
+  position: relative;
+}
+
+.teacher-qualifications-box li::before,
+.teacher-achievements li::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+/* Achievements */
+.teacher-achievements {
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--gray-light);
+  border-radius: 16px;
+}
+
+/* --- Publications --- */
+.teacher-publications {
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--pink-bg);
+  border-radius: 16px;
+}
+
+.teacher-publications h4 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-light);
+}
+
+.publication-item {
+  margin-bottom: 24px;
+}
+
+.publication-item:last-child {
+  margin-bottom: 0;
+}
+
+.publication-item h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.publication-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--dark);
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.publication-note {
+  font-size: 0.8rem;
+  color: var(--pink);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* --- Activities --- */
+.teacher-activities {
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--gray-light);
+  border-radius: 16px;
+}
+
+.teacher-activities h4 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-light);
+}
+
+.teacher-activities li {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 2;
+  padding-left: 20px;
+  position: relative;
+}
+
+.teacher-activities li::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+.teacher-activities p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.9;
+  margin-top: 16px;
+}
+
+/* --- Reviews Box --- */
+.teacher-reviews-box {
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--pink-bg);
+  border-radius: 16px;
+}
+
+.teacher-reviews-box h4 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-light);
+}
+
+.teacher-reviews-lead {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-bottom: 16px;
+}
+
+.teacher-review-quotes blockquote {
+  font-size: 0.84rem;
+  color: var(--gray);
+  line-height: 1.9;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  background: var(--white);
+  border-radius: 10px;
+  border-left: 3px solid var(--pink-light);
+  position: relative;
+}
+
+.teacher-review-quotes blockquote:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Accordion (details/summary) --- */
+.teacher-accordion {
+  margin-top: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+.teacher-accordion summary {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  padding: 20px 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--gray-light);
+  transition: background 0.3s;
+  list-style: none;
+}
+
+.teacher-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.teacher-accordion summary::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--pink);
+  border-bottom: 2px solid var(--pink);
+  transform: rotate(45deg);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.teacher-accordion[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.teacher-accordion summary:hover {
+  background: var(--pink-bg);
+}
+
+.accordion-content {
+  padding: 28px;
+}
+
+/* Accordion inside publications */
+.teacher-publications .teacher-accordion {
+  margin-top: 12px;
+  box-shadow: none;
+}
+
+.teacher-publications .teacher-accordion summary {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 14px 20px;
+  background: var(--white);
+}
+
+.teacher-publications .accordion-content {
+  padding: 16px 20px;
+  background: var(--white);
+}
+
+.teacher-publications .accordion-content blockquote {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.9;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-left: 3px solid var(--pink-light);
+  font-style: italic;
+}
+
+.teacher-publications .accordion-content blockquote:last-child {
+  margin-bottom: 0;
+}
+
+/* Story accordion */
+.teacher-story-accordion {
+  background: var(--pink-bg);
+}
+
+.teacher-story-accordion summary {
+  background: var(--pink-bg);
+}
+
+.teacher-story-accordion summary:hover {
+  background: rgba(200, 90, 124, 0.1);
+}
+
+.teacher-story-accordion .accordion-content {
+  background: var(--pink-bg);
+}
+
+/* --- Evaluations --- */
+.teacher-evaluations {
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--gray-light);
+  border-radius: 16px;
+}
+
+.teacher-evaluations h4 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-light);
+}
+
+.teacher-evaluations-lead {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+
+.teacher-evaluations li {
+  font-size: 0.84rem;
+  color: var(--gray);
+  line-height: 2;
+  padding-left: 20px;
+  position: relative;
+}
+
+.teacher-evaluations li::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+/* --- Competition list in accordion --- */
+.competition-list li {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 2;
+  padding-left: 20px;
+  position: relative;
+}
+
+.competition-list li::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+/* --- Other Teachers Cards --- */
+.other-teachers {
+  background: var(--gray-light);
+}
+
+.teacher-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.teacher-card {
+  display: flex;
+  gap: 40px;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.teacher-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+
+.teacher-card-img {
+  flex: 0 0 280px;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.teacher-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s;
+}
+
+.teacher-card:hover .teacher-card-img img {
+  transform: scale(1.04);
+}
+
+.teacher-card-body {
+  flex: 1;
+  padding: 40px 40px 40px 0;
+}
+
+.teacher-card-role {
+  display: inline-block;
+  background: var(--pink-bg);
+  color: var(--pink);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.teacher-card-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 2px;
+  letter-spacing: 0.06em;
+}
+
+.teacher-card-en {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.8rem;
+  color: var(--pink-light);
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+
+.teacher-card-location {
+  font-size: 0.8rem;
+  color: var(--pink);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.teacher-card-desc p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 2;
+  margin-bottom: 12px;
+}
+
+.teacher-card-message {
+  font-style: italic;
+  color: var(--pink) !important;
+  font-weight: 500;
+  padding: 16px 20px;
+  background: var(--pink-bg);
+  border-radius: 10px;
+  border-left: 3px solid var(--pink-light);
+  margin-top: 8px;
+}
+
+/* --- Peer Reviews --- */
+.peer-reviews {
+  background: var(--white);
+}
+
+.peer-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.peer-review-card {
+  background: var(--pink-bg);
+  border-radius: 16px;
+  padding: 32px 28px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.peer-review-card:hover {
+  transform: translateY(-4px);
+}
+
+.peer-review-card::before {
+  content: "\201C";
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  color: var(--pink-light);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.peer-review-card p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 2;
+  padding-top: 16px;
+}
+
+.peer-review-author {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--pink);
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: right;
+}
+
+/* Current nav link */
+.nav-list a.current {
+  color: var(--pink);
+}
+.nav-list a.current::after {
+  width: 100%;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 960px) {
+  .page-hero {
+    padding: 140px 0 64px;
+  }
+
+  .teacher-detail-inner,
+  .teacher-detail-inner.reverse {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .teacher-detail-image {
+    flex: none;
+    position: static;
+  }
+
+  .teacher-img-frame {
+    width: 260px;
+    height: 340px;
+    margin: 0 auto;
+  }
+
+  .teacher-message-box {
+    padding: 20px 24px;
+  }
+
+  .peer-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-card {
+    flex-direction: column;
+  }
+
+  .teacher-card-img {
+    flex: none;
+    min-height: 260px;
+    max-height: 320px;
+  }
+
+  .teacher-card-body {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 110px 0 48px;
+  }
+
+  .page-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .page-hero-lead {
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+
+  .page-hero-lead br {
+    display: none;
+  }
+
+  .teacher-img-frame {
+    width: 200px;
+    height: 260px;
+  }
+
+  .teacher-name {
+    font-size: 1.5rem;
+  }
+
+  .teacher-name-en {
+    margin-bottom: 24px;
+  }
+
+  .teacher-story h3 {
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+
+  .teacher-story p {
+    font-size: 0.85rem;
+  }
+
+  .teacher-qualifications-box,
+  .teacher-achievements,
+  .teacher-publications,
+  .teacher-activities,
+  .teacher-evaluations,
+  .teacher-reviews-box {
+    padding: 20px 16px;
+  }
+
+  .teacher-message-box {
+    padding: 16px;
+    margin-top: 24px;
+  }
+
+  .teacher-card-img {
+    min-height: 220px;
+    max-height: 280px;
+  }
+
+  .teacher-card-body {
+    padding: 24px 16px;
+  }
+
+  .teacher-card-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .teacher-card-desc p {
+    font-size: 0.82rem;
+  }
+
+  .teacher-card-message {
+    padding: 14px 16px;
+    font-size: 0.82rem;
+  }
+
+  .peer-review-card {
+    padding: 24px 20px;
+  }
+
+  .peer-review-card p {
+    font-size: 0.82rem;
+  }
+
+  .teacher-accordion summary {
+    font-size: 0.9rem;
+    padding: 16px 20px;
+  }
+
+  .accordion-content {
+    padding: 20px 16px;
+  }
+}
