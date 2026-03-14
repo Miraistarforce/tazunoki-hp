@@ -1646,6 +1646,12 @@ ul {
     transform: translateY(160%);
     opacity: 0;
   }
+  /* White button: reverse on tap */
+  .btn-primary.btn-white:active {
+    background: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+  }
 }
 
 .btn-white {
