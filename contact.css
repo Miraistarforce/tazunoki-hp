@@ -252,10 +252,15 @@
 }
 
 .btn-submit {
-  display: inline-block;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
   max-width: 320px;
-  padding: 16px 32px;
+  height: 56px;
+  padding: 0 32px;
   background: var(--pink);
   color: #fff;
   font-family: "Noto Sans JP", sans-serif;
@@ -263,18 +268,139 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: opacity 0.3s, transform 0.3s;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s,
+              background 0.4s,
+              border-radius 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              max-width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(200, 90, 124, 0.25);
 }
 
 .btn-submit:hover {
-  opacity: 0.85;
   transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200, 90, 124, 0.35);
+  opacity: 1;
 }
 
-.btn-submit span {
-  margin-left: 8px;
+.btn-submit:active {
+  transform: scale(0.96);
+}
+
+/* Text */
+.btn-submit-text {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Paper plane icon */
+.btn-submit-plane {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s;
+}
+
+/* Checkmark icon */
+.btn-submit-check {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  transform: scale(0) rotate(-45deg);
+  transition: opacity 0.4s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Sent text */
+.btn-submit-sent {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  transition: opacity 0.4s 0.15s, transform 0.4s 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* === Phase 1: Sending (plane flies away) === */
+.btn-submit.is-sending .btn-submit-text {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.btn-submit.is-sending .btn-submit-plane {
+  animation: planeFly 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes planeFly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(40px, -30px) rotate(-15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(200px, -80px) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+/* === Phase 2: Shrink to circle === */
+.btn-submit.is-shrink {
+  max-width: 56px;
+  border-radius: 50%;
+  background: var(--pink);
+  pointer-events: none;
+  animation: btnPulse 0.8s ease-in-out;
+}
+
+@keyframes btnPulse {
+  0%, 100% { transform: scale(1); }
+  30% { transform: scale(0.9); }
+  60% { transform: scale(1.05); }
+}
+
+.btn-submit.is-shrink .btn-submit-text,
+.btn-submit.is-shrink .btn-submit-plane {
+  opacity: 0;
+}
+
+/* === Phase 3: Done === */
+.btn-submit.is-done {
+  max-width: 280px;
+  border-radius: 50px;
+  background: #5cb85c;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(92, 184, 92, 0.3);
+}
+
+.btn-submit.is-done .btn-submit-text,
+.btn-submit.is-done .btn-submit-plane {
+  opacity: 0;
+}
+
+.btn-submit.is-done .btn-submit-check {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.btn-submit.is-done .btn-submit-sent {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Position check + sent text side by side */
+.btn-submit.is-done .btn-submit-check {
+  position: relative;
+  margin-right: 4px;
+}
+
+.btn-submit.is-done .btn-submit-sent {
+  position: relative;
 }
 
 /* --- Notes Section --- */
@@ -438,7 +564,8 @@
 
   .btn-submit {
     font-size: 0.9rem;
-    padding: 14px 24px;
+    height: 52px;
+    padding: 0 24px;
   }
 
   .notes-list li {

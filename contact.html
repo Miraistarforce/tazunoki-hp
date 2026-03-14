@@ -103,7 +103,16 @@
             <textarea id="message" name="message" rows="8" required placeholder="ピアノを習いたい方の年齢、当教室に聞きたいこと、ご相談などをお気軽にお書きください。"></textarea>
           </div>
           <div class="form-submit">
-            <button type="submit" class="btn-submit">送信する <span>&rsaquo;</span></button>
+            <button type="submit" class="btn-submit" id="btnSubmit">
+              <span class="btn-submit-text">送信する</span>
+              <svg class="btn-submit-plane" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+              </svg>
+              <svg class="btn-submit-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+              </svg>
+              <span class="btn-submit-sent">送信完了！</span>
+            </button>
           </div>
         </form>
       </div>
@@ -253,6 +262,37 @@
         }
       });
     });
+
+    // Submit button animation
+    const btnSubmit = document.getElementById('btnSubmit');
+    const contactForm = document.querySelector('.contact-form');
+
+    if (btnSubmit && contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Phase 1: Plane flies away
+        btnSubmit.classList.add('is-sending');
+
+        // Phase 2: Shrink to circle
+        setTimeout(function() {
+          btnSubmit.classList.remove('is-sending');
+          btnSubmit.classList.add('is-shrink');
+        }, 700);
+
+        // Phase 3: Expand to "Sent!" state
+        setTimeout(function() {
+          btnSubmit.classList.remove('is-shrink');
+          btnSubmit.classList.add('is-done');
+        }, 1500);
+
+        // Reset after showing success
+        setTimeout(function() {
+          btnSubmit.classList.remove('is-done');
+          contactForm.reset();
+        }, 4000);
+      });
+    }
   </script>
   <script src="transition.js"></script>
 </body>
