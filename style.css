@@ -1665,7 +1665,7 @@ ul {
   color: #fff;
 }
 
-.btn-white:hover {
+.btn-primary.btn-white:hover {
   background: var(--pink);
   color: #fff;
   border-color: var(--pink);
