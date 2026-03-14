@@ -1650,7 +1650,7 @@ ul {
   .btn-primary.btn-white:active {
     background: var(--pink);
     color: #fff;
-    border-color: var(--pink);
+    border-color: #fff;
   }
 }
 
@@ -1668,7 +1668,7 @@ ul {
 .btn-primary.btn-white:hover {
   background: var(--pink);
   color: #fff;
-  border-color: var(--pink);
+  border-color: #fff;
   box-shadow: 0 8px 28px rgba(200, 90, 124, 0.4);
 }
 
