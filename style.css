@@ -379,14 +379,14 @@ ul {
 
 .cta-circle:hover .cta-circle-label {
   transform: scale(1.15, 0.92);
-  color: #fff;
+  color: var(--pink);
 }
 
 .cta-circle:hover .cta-circle-bg-inner {
-  border: 1.5px dashed #fff;
-  background-color: rgba(200, 90, 124, 0.85);
+  border: 1.5px dashed var(--pink);
+  background-color: transparent;
   transform: scale(1.35);
-  box-shadow: 0 8px 30px rgba(200, 90, 124, 0.4);
+  box-shadow: none;
 }
 
 /* Gentle nudge when idle */
